@@ -40,30 +40,30 @@ CursorColumn   xxx ctermbg=187 guibg=Grey90
 CursorLine     xxx ctermbg=187 guibg=Grey90
 ColorColumn    xxx ctermbg=187 guibg=LightRed
 MatchParen     xxx term=bold cterm=bold ctermfg=124 ctermbg=245 guibg=Cyan
-Comment        xxx ctermfg=245 guifg=Blue
-Constant       xxx ctermfg=93 guifg=Magenta
+					Comment        xxx ctermfg=245 guifg=Blue
+					Constant       xxx ctermfg=93 guifg=Magenta
 Special        xxx ctermfg=124 guifg=SlateBlue
 Identifier     xxx ctermfg=33 guifg=DarkCyan
-Statement      xxx ctermfg=64 gui=bold guifg=Brown
+					Statement      xxx ctermfg=64 gui=bold guifg=Brown
 PreProc        xxx ctermfg=166 guifg=Purple
 Type           xxx ctermfg=136 gui=bold guifg=SeaGreen
 Underlined     xxx ctermfg=61 gui=underline guifg=SlateBlue
 Ignore         xxx guifg=bg
 Error          xxx term=bold cterm=bold ctermfg=124 guifg=White guibg=Red
 Todo           xxx term=bold cterm=bold ctermfg=125 guifg=Blue guibg=Yellow
-String         xxx links to Constant
-Character      xxx links to Constant
-Number         xxx links to Constant
-Boolean        xxx links to Constant
-Float          xxx links to Number
+					String         xxx links to Constant
+					Character      xxx links to Constant
+					Number         xxx links to Constant
+					Boolean        xxx links to Constant
+					Float          xxx links to Number
 
-Function       xxx links to Identifier
-Conditional    xxx links to Statement
-Repeat         xxx links to Statement
-Label          xxx links to Statement
-Operator       xxx links to Statement
-Keyword        xxx links to Statement
-Exception      xxx links to Statement
+					Function       xxx links to Identifier
+					Conditional    xxx links to Statement
+					Repeat         xxx links to Statement
+					Label          xxx links to Statement
+					Operator       xxx links to Statement
+					Keyword        xxx links to Statement
+					Exception      xxx links to Statement
 Include        xxx links to PreProc
 Define         xxx links to PreProc
 Macro          xxx links to PreProc
@@ -76,7 +76,7 @@ SpecialChar    xxx links to Special
 Delimiter      xxx links to Special
 SpecialComment xxx links to Special
 Debug          xxx links to Special
-Normal         xxx ctermfg=240 ctermbg=230
+			Normal         xxx ctermfg=240 ctermbg=230
 Cursor         xxx ctermfg=230 ctermbg=240
 lCursor        xxx links to Cursor
 vimVar         xxx links to Identifier
