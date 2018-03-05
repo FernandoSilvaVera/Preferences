@@ -1,0 +1,9 @@
+Path ==> /etc/apache2/apache2.conf
+
+<Directory /home/fernando/Escritorio/>
+	Options Indexes FollowSymLinks
+	AllowOverride All
+	Require all granted
+</Directory>
+
+sudo service apache2 restart
