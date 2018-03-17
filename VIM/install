@@ -1,0 +1,7 @@
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+mkdir ~/.vim/snippets
+mkdir ~/.vim/colors
+ln snippets/* ~/.vim/snippets
+ln colors/* ~/.vim/colors
+ln vimrc  ~/.vim
+ln vundle.vim ~/.vim
