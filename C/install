@@ -1,0 +1,4 @@
+#! /bin/bash 
+
+#ncurses
+sudo apt-get install libncurses-dev
