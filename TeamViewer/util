@@ -1,0 +1,3 @@
+service teamviewerd stop
+service teamviewerd start
+teamviewer status
