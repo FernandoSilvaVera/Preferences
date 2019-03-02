@@ -1,0 +1,32 @@
+set laststatus=2
+set noswapfile		"No crea los .swp
+set title
+
+set number
+"set relativenumber
+filetype on
+filetype plugin on
+
+set hlsearch		"Ilumina las palabras que estoy buscando con *
+set incsearch		"Ilumina las palabras que estoy buscando con /
+
+set encoding=utf-8
+set cursorline
+
+
+set tabstop=4     " Size of a hard tabstop (ts).
+set smarttab
+set shiftwidth=4  " Size of an indentation (sw).
+set noexpandtab   " Always uses tabs instead of space characters (noet).
+set autoindent    " Copy indent from current line when starting a new line (ai).
+
+source ~/.vim/colors/solarized.vim
+
+	syntax enable
+	set background=dark
+	let g:solarized_termcolors=256
+	colorscheme solarized
+
+
+
+
