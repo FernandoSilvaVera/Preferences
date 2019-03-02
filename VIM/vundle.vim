@@ -11,7 +11,9 @@ Plugin 'vim-scripts/AutoComplPop'		"Autocompleta
 Plugin 'Raimondi/delimitMate'			"Cierra las comillas
 Plugin 'mattn/emmet-vim'				"Crea html 
 Plugin 'scrooloose/syntastic'			"Errores
-
+Plugin 'scrooloose/nerdtree'			"Tree
+Plugin 'itchyny/lightline.vim'			"Ver en el modo que estas de vim (parte de abajo)
+	set laststatus=2
 
 """""""""""""""""""""""""""""""""""
 "	SNIPPETS		
