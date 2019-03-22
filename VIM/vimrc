@@ -1,4 +1,12 @@
 set nu
+set laststatus=2
+set noswapfile		"No crea los .swp
+set title
+set hlsearch		"Ilumina las palabras que estoy buscando con *
+set incsearch		"Ilumina las palabras que estoy buscando con /
+set encoding=utf-8
+set cursorline
+set autochdir	"Te pone en el directorio del fichero
 source ~/.vim/vundle.vim
 filetype on
 filetype plugin on
@@ -14,7 +22,7 @@ set autoindent    " Copy indent from current line when starting a new line (ai).
 source ~/.vim/colors/solarized.vim
 
 	syntax enable
-	set background=light
+	set background=dark
 	let g:solarized_termcolors=256
 	colorscheme solarized
 
