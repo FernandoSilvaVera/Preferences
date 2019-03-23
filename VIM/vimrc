@@ -16,6 +16,8 @@ set shiftwidth=4  " Size of an indentation (sw).
 set noexpandtab   " Always uses tabs instead of space characters (noet).
 set autoindent    " Copy indent from current line when starting a new line (ai).
 
+map <F2> :GitGutterLineHighlightsToggle<CR>
+map <F3> :call gitblame#echo()<CR>
 """""""""""""""""""""""""""""""""""""""""
 "	    PALETA DE COLORES               "
 
