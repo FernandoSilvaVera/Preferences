@@ -1,0 +1,4 @@
+git clone https://github.com/jaivardhankapoor/bestbash ~/.bash/ 
+mv ~/.bashrc ~/.bashrc.bk 
+ln -s ~/.bash/init ~/.bashrc
+source ~/.bashrc

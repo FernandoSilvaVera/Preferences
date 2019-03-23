@@ -18,6 +18,7 @@ set autoindent    " Copy indent from current line when starting a new line (ai).
 
 map <F2> :GitGutterLineHighlightsToggle<CR>
 map <F3> :call gitblame#echo()<CR>
+map <F4> :echo gitbranch#name()<CR>
 """""""""""""""""""""""""""""""""""""""""
 "	    PALETA DE COLORES               "
 
