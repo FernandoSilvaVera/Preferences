@@ -13,6 +13,7 @@ Plugin 'mattn/emmet-vim'				"Crea html
 Plugin 'scrooloose/syntastic'			"Errores
 Plugin 'scrooloose/nerdtree'			"Tree
 Plugin 'kien/ctrlp.vim'					"Busca ficheros
+Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'			"Te muestra el diff
 Plugin 'zivyangll/git-blame.vim'		"Git blame
 Plugin 'itchyny/vim-gitbranch'
