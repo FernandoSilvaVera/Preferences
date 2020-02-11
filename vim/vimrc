@@ -1,18 +1,19 @@
 set nu
 set laststatus=2
-set noswapfile		"No crea los .swp
+set noswapfile          "No crea los .swp
 set title
-set hlsearch		"Ilumina las palabras que estoy buscando con *
-set incsearch		"Ilumina las palabras que estoy buscando con /
+set hlsearch            "Ilumina las palabras que estoy buscando con *
+set incsearch           "Ilumina las palabras que estoy buscando con /
 set encoding=utf-8
+set fileformat=unix
 set cursorline
-set autochdir	"Te pone en el directorio del fichero
+set autochdir   "Te pone en el directorio del fichero
 source ~/.vim/vundle.vim
 filetype on
 filetype plugin on
 
-set tabstop=4     " Size of a hard tabstop (ts).
-set shiftwidth=4  " Size of an indentation (sw).
+"set tabstop=4     " Size of a hard tabstop (ts).
+"set shiftwidth=4  " Size of an indentation (sw).
 set noexpandtab   " Always uses tabs instead of space characters (noet).
 set autoindent    " Copy indent from current line when starting a new line (ai).
 
@@ -23,18 +24,16 @@ map <F7> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 map <F8> :TagbarToggle<CR>
-"""""""""""""""""""""""""""""""""""""""""
-"	    PALETA DE COLORES               "
+let g:lightline = {
+	\ 'colorscheme': 'wombat',
+\ }
+syntax on
+source ~/.vim/colors/dracula.vim
 
-source ~/.vim/colors/solarized.vim
-
-	syntax enable
-	set background=dark
-	let g:solarized_termcolors=256
-	colorscheme solarized
-
-"										"
-"""""""""""""""""""""""""""""""""""""""""
+"Abrir vim en la línea que estaba
 if has("autocmd")
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+if !has('gui_running')
+set t_Co=256
 endif

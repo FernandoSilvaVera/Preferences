@@ -18,6 +18,7 @@ Plugin 'airblade/vim-gitgutter'			"Te muestra el diff
 Plugin 'zivyangll/git-blame.vim'		"Git blame
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'itchyny/lightline.vim'			"Ver en el modo que estas de vim (parte de abajo)
+Plugin 'dracula/vim', { 'name': 'dracula' }
 	set laststatus=2
 
 """""""""""""""""""""""""""""""""""
