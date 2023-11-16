@@ -1,11 +1,112 @@
+snippet doc
+	/**
+	 *	${1}
+	 *	@param ${2}
+	 **/
+
+snippet logvgedasa
+	echo file_get_contents("/home/fsilva/tmp/vwasa.log", true);die;
+
+snippet switch
+	switch(${1}){
+		case ${2}:
+			${3}
+			break;
+		case :
+			break;
+		default:
+			break;
+
+	}
+
+snippet script
+	<script id="${1}" type="text/x-mustache-template">
+		${2}
+	</script>
+
+snippet true
+	{{#${1}}}
+		${3}
+	{{/${2}}}
+
+snippet false
+	{{^${1}}}
+		${3}
+	{{/${2}}}
+
+snippet imaClass
+	<?php
+	namespace easyford\business;
+
+	use php\mvc\App;
+	use imaweb\factories\ORM;
+
+	class SparePartDelivery extends \imaweb\business\ImawebBusiness{
+
+	}
+
+
+snippet file_get
+	$json = file_get_contents("/home/fsilva/json", true);
+	$JSONInput = json_decode($json, true);
+snippet stmt
+	$stmt->getQuery();
+
+snippet App
+	use php\mvc\App;
+snippet orm
+	use imaweb\factories\ORM;
+snippet Orm
+	use imaweb\factories\ORM;
+snippet DBTranslator
+	use imaweb\i18n\DBTranslator;
+snippet business
+	$${1} = Business::getInstance( '${2}', '${3}', [] );
+
+snippet echo
+	echo "${1}";
 snippet print_r
-	print("<pre>");
-	print_r( {$1} );
+	echo("<pre>");
+	echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">';
+	echo '<div class="container mt-5">';
+	print_r( ${1} );
+	die;
 snippet depurar
-	debug_print_backtrace();die;
+	print("<pre>");
+	echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">';
+	$data = debug_backtrace();
+	echo '
+		<div class="container">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">File</th>
+						<th scope="col">Line</th>
+						<th scope="col">Function</th>
+					</tr>
+				</thead>
+				<tbody>
+		';
+	foreach($data as $d){
+		echo '
+					<tr>
+						<td>' . $d['file'] . '</td>
+						<td>' . $d['line'] . '</td>
+						<td>' . $d['function'] . '</td>
+					</tr>
+
+		';
+	}
+		echo '
+				</tbody>
+			</table>
+		</div>
+		';
+	die;
+
 
 snippet file
-	file_put_contents('/ome/fsilva/utils/depurar/depurar', print_r($sql, true),FILE_APPEND);
+	file_put_contents('/home/fsilva/depurar', print_r(${1}, true), FILE_APPEND);
 
 snippet php
 	<?PHP
@@ -17,9 +118,9 @@ snippet class
 	class ${1}{
 
 		public function __construct(){
-		
+
 		}
-	
+
 	}
 snippet functionPriv
 	private function ${1}(){
@@ -46,3 +147,60 @@ snippet for
 snippet foreach
 	foreach(${1} as ${2})
 		${3}
+
+snippet classReportType
+	<?php
+
+	namespace asa\reports\types;
+	use imaweb\reports\ExplodableReportDataType;
+	use php\util\Date;
+
+	class ${1}Type extends BaseASType{
+
+		protected $name = '${2}';
+
+		protected function getSqlBinds( $groupField, Date $lowerRange, Date $upperRange, $conds, array $binds ) {
+			$sql = "select 0, 1 as count from dual where 1=0";
+
+			return array( $sql, $binds );
+		}
+
+	}
+
+snippet createBusiness
+	<?php
+	namespace ${1}
+
+	class ${2} extends \imaweb\business\ImawebBusiness{
+
+		public function __construct(){
+
+		}
+
+	}
+snippet createController
+	<?php
+
+	namespace easyford\mvc;
+
+	use php\mvc\Model;
+	use php\util\Hashtable;
+	use php\mvc\AppContext;
+
+	class FernandoController extends \imaweb\mvc\ImawebController {
+
+		protected $ctxt;
+
+		public function __construct($module, $name, AppContext $ctxt){
+			$this->ctxt = $ctxt;
+			parent::__construct( $module, $name, $ctxt );
+		}
+
+		public function defaultAction( Model $model, Hashtable $args ) {
+		}
+
+	}
+
+snippet cessar
+	$cesarmessage = file_get_contents("/home/fsilva/cesar", true);
+

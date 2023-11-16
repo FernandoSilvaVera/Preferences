@@ -1,21 +1,44 @@
-*****************FUNCTION*******************
+snippet mustache
+	var mustache = {
+		template: '${1}',
+		data: {
+			${2}
+		},
+		partial: [
+			"${3}"
+		]
+	}
+
+snippet php
+	imaMustacheService.api.aftersalesApi.${1}(${2}, ${3}, ${4})
+
+snippet foreach
+	$(${1}).each(function (index, value){
+		${2}
+	})
+
+snippet console
+	console.log(${1})
+
+snippet if
+	if(${1}){
+		${2}
+	}${3}
 
 sanippet function
 	function ${1}() {
-	
 	}
-
-*****************ARRAY*******************
 
 snippet array.prototype
 	array.prototype.${1} = function(){
 		${2}.
 	}
 
-*****************DOCUMENT*******************
 
 snippet document.getElementById("")
 	document.getElementById("${1}")
 
 snippet document.getPrueba
 	prueba
+snippet mergeData
+	imaMustacheService.mergeData('#id', 'template', data, that->partials());
