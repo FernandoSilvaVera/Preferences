@@ -7,6 +7,7 @@ call vundle#begin()
 
 call vundle#end()           
 
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-scripts/AutoComplPop'		"Autocompleta
 Plugin 'Raimondi/delimitMate'			"Cierra las comillas
 Plugin 'mattn/emmet-vim'				"Crea html 

@@ -1,3 +1,7 @@
+filetype plugin indent on
+
+
+set smartindent 
 set nu
 set laststatus=2
 set noswapfile          "No crea los .swp
@@ -12,12 +16,31 @@ source ~/.vim/vundle.vim
 filetype on
 filetype plugin on
 
-"set tabstop=4     " Size of a hard tabstop (ts).
-"set shiftwidth=4  " Size of an indentation (sw).
-set noexpandtab   " Always uses tabs instead of space characters (noet).
-set autoindent    " Copy indent from current line when starting a new line (ai).
+au BufRead,BufNewFile *.html.twig set filetype=html
 
-map <F2> :GitGutterLineHighlightsToggle<CR>
+" Configuración específica para archivos de JavaScript, HTML, CSS
+autocmd FileType javascript,css setlocal tabstop=2 shiftwidth=2
+
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+
+" " Configuración específica para archivos de Python
+autocmd FileType python setlocal tabstop=4 shiftwidth=4
+"
+" " Configuración específica para archivos de C y C++
+autocmd FileType c,cpp setlocal tabstop=4 shiftwidth=4
+"
+" " Configuración específica para archivos de Ruby
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
+"
+" " Configuración específica para archivos de Go (sin expandtab)
+autocmd FileType go setlocal tabstop=4 shiftwidth=4 noexpandtab
+"
+" " Configuración específica para archivos de PHP
+autocmd FileType php setlocal tabstop=4 shiftwidth=4
+
+set pastetoggle=<F2>
+
+
 map <F3> :call gitblame#echo()<CR>
 map <F4> :echo gitbranch#name()<CR>
 map <F7> :NERDTreeToggle<CR>
